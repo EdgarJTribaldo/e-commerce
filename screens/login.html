@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>e-commerce</title>
+  </head>
+  <body>
+    <header class="wrap__header">
+      <div class="wrap__search">
+        <img
+          src="../assets/Logo.svg"
+          width="176"
+          height="50"
+          alt="logotipo"
+          onclick="redirectToPage()"
+        />
+        <div id="search_result" class="wrap__result">
+          <form id="search-form" action="/buscar" method="get" class="search">
+            <input
+              id="productInput"
+              type="text"
+              name="q"
+              placeholder="Buscar productos..."
+            />
+            <button id="search-button" type="submit">Buscar</button>
+          </form>
+          <div id="search-results"></div>
+        </div>
+      </div>
+      <button class="btnLogin">Login</button>
+    </header>
+    <main>
+      
+      <div class="formulario">
+        <div class="formulario-login container">
+            <h3 class="formulario-login__titulo">Crea una cuenta</h2>
+            <form action="" class="formulario-login_form" data-form>
+                <div class="formulario-login__input-container">
+                    <input name="usuario" id="usuario" class="input_login" type="text" placeholder="Account" required data-tipo="usuario" data-user>
+                </div>
+                <div class="formulario-login__input-email">
+                  <input placeholder="Email" class="input_email" type="email" name="email" id="email" data-email required>
+                </div>
+                <div class="formulario-login__input-container">
+                    <input name="contraseña" id="contraseña" class="input_pass" type="password" placeholder="Password" required   data-tipo="contraseña" data-pass>
+
+                </div>
+                <input class="boton-formulario-login" type="submit" name="enviar" id="enviar-login" value="Create">
+            </form>
+        </div>
+    </div>
+    </main>
+    <section class="rodapie">
+      <footer class="footer">
+        <div class="logo_footer">
+          <img
+            src="../assets/Logo.svg"
+            width="176"
+            height="50"
+            alt="logotipo"
+            onclick="redirectToPage()"
+          />
+        </div>
+        <div class="links_footer">
+          <ul>
+            <li>Quienes somos</li>
+            <li>Politicas de privacidad</li>
+            <li>Programa de fidelidad</li>
+            <li>Contacto</li>
+            <li><b><i><u></u>Comprar Ahora</u></i></b></li>
+          </ul>
+        </div>
+        <div class="contact_footer">
+          <h3>Hable con nosotros</h3>
+          <form action="">
+            <input type="text" name="" id="" placeholder="Nombre" />
+            <textarea
+              placeholder="Escribe tu mensaje"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </footer>
+      <p>
+        Derechos de autor © 2023 Edgar Tribaldo.<br />
+        Todos los derechos reservados.
+      </p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js" integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../controllers/registro.js"></script>
+  </body>
+</html>

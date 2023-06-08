@@ -1,0 +1,431 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  border: 1px solid transparent;
+  margin: 0;
+  cursor: pointer;
+  color: #2a7ae4;
+  border-radius: 20px;
+}
+
+.productBtn:hover {
+  border: 1px solid #2a7ae4;
+}
+
+.precio_p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  /* Preto/100% */
+
+  color: #464646;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.wrap__search {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.wrap__result {
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.search__result {
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  position: relative;
+  z-index: 2;
+}
+
+.wrap__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  gap: 10px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+
+  width: 393px;
+  height: 40px;
+
+  /* Preto/05% */
+
+  background: #f5f5f5;
+  border-radius: 20px;
+}
+
+.search > input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  background-color: #f5f5f5;
+}
+
+.search > input:focus {
+  outline: none;
+}
+
+/* BANNER */
+
+.wrap__banner {
+  background-image: radial-gradient(
+      circle farthest-corner at 22.4% 21.7%,
+      rgba(42, 122, 228, 0.8) 0%,
+      rgba(2, 83, 185, 0.1) 100.2%
+    ),
+    url("./assets/Hero.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  top: 0;
+  height: 352px;
+  display: flex;
+}
+
+.banner__promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 10px;
+  width: 100%;
+  max-width: 1240px;
+}
+
+.banner__promo > h2 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 4em;
+  gap: 10px;
+}
+
+.banner__promo > button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 150px;
+  height: 51px;
+
+  /* Azul/100% */
+
+  background: #2a7ae4;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  /* Preto/branco */
+
+  color: #ffffff;
+}
+/* STARTWARS PRODUCTS */
+
+.wrap__starWars {
+  margin: 64px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.banner__promo > button:hover {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+
+.starWars_title {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #464646;
+  margin: 0px;
+}
+
+.starWars_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* buttons */
+.btnLogin {
+  box-sizing: border-box;
+  border: 1px solid #2a7ae4;
+  width: 182px;
+  height: 51px;
+  font-weight: 400;
+}
+.btnLogin:hover {
+  border: 1px solid #2a7ae4;
+  background-color: #2a7ae4;
+  color: white;
+  transition: background-color 0.5s;
+}
+
+/* RODAPIE */
+.rodapie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  top: 0;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  align-items: flex-start;
+  gap: 150px;
+  padding: 50px 0;
+}
+
+.links_footer > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  /* Preto/100% */
+
+  color: #464646;
+}
+.contact_footer {
+  gap: 10px;
+}
+
+.contact_footer > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact_footer > h3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  /* Preto/100% */
+
+  color: #464646;
+}
+
+.contact_footer > form > input {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid #464646;
+}
+.contact_footer > form > textarea {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #464646;
+}
+
+.contact_footer > form > button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+
+  width: 144px;
+  height: 51px;
+  color: white;
+
+  /* Azul/100% */
+
+  background: #2a7ae4;
+}
+
+.contact_footer > form > button:hover {
+  border: 1px solid #2a7ae4;
+  background: transparent;
+  color: #2a7ae4;
+  transition: background-color 0.5s;
+}
+
+.rodapie > p {
+  text-align: center;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  /* Preto/100% */
+
+  color: #464646;
+  padding: 20px 0;
+}
+
+/* PAGE LOGIN */
+/*  */
+/*  */
+
+.formulario {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 94%;
+  margin: 0 auto;
+}
+
+.formulario-login__titulo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+
+  /* Preto/100% */
+
+  color: #464646;
+}
+.formulario-login_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.boton-formulario-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 10px;
+  color: white;
+  border: 1px solid #2a7ae4;
+  /* Azul/100% */
+  border-radius: 20px;
+  background: #2a7ae4;
+}
+
+.boton-formulario-login:hover {
+  color: #2a7ae4;
+  border: 1px solid #2a7ae4;
+  /* Azul/100% */
+  transition: background-color 0.5s;
+
+  background: transparent;
+}
+
+.input_login {
+  padding: 20px;
+  height: 100%;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+}
+
+.input_pass {
+  padding: 20px;
+  height: 100%;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+}
+
+.input_email {
+  padding: 20px;
+  height: 100%;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+}

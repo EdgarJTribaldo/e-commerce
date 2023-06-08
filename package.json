@@ -1,0 +1,23 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "e-commerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\*Error: no test specified \\* && exit l\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alura-challenges/challenge-one-alurageek-latam.git"
+  },
+  "keywords": [
+    "crud",
+    "ecommerce"
+  ],
+  "author": "Edgar Tribaldo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alura-challenges/challenge-one-alurageek-latam/issues"
+  },
+  "homepage": "https://github.com/alura-challenges/challenge-one-alurageek-latam#readme"
+}
