@@ -22,15 +22,17 @@ const searchResults = document.querySelector('#search_result');
 searchResults.classList.add("search__result");
 
 
+// Forma abreviada del fetch const listaClientes = () => fetch().then((respuesta) => respuesta.json());
+
 
 fetch("http://localhost:3000/productos").then( (response) => { 
   if(!response.ok){
     throw new Error(`HTTP error: ${response.status}`);
   }
-  console.log(response);
+  // console.log(response);
   return response.json()})
 .then( data => {
-  console.log(data);
+  // console.log(data);
 
   const starWarsProducts = data.filter(product => product.categoria === 'Star wars');
   starWarsProducts.forEach(product => {
@@ -111,12 +113,18 @@ function redirectToPage() {
 // REGISTER USER
 
 const createClient = (userRegister) => {
-  return fetch("http://localhost:3000/productos", {
+  return fetch("https://64827715f2e76ae1b95b4304.mockapi.io/api/v1/products", {
     methot: "POST",
+
+    // Los headers son un estandar para que el servidor sepa que tipo de archivos va a a recibir 
     headers: {
       "content-type": "application/json"
     },
-    body: JSON.stringify( {name, email, id: uuid.v4()})
+    body: JSON.stringify( {
+      name: userRegister.user,
+      description: userRegister.email,
+      contraseña: userRegister.pass,
+    })
   })
 
   .then((response) => { 
@@ -134,6 +142,6 @@ const createClient = (userRegister) => {
   })
 }
 
-export const clientServices = {
-  createClient,
-};
+// export const clientServices = {
+//   createClient
+// }
