@@ -25,7 +25,7 @@ searchResults.classList.add("search__result");
 // Forma abreviada del fetch const listaClientes = () => fetch().then((respuesta) => respuesta.json());
 
 
-fetch("http://localhost:3000/productos").then( (response) => { 
+fetch("https://64827715f2e76ae1b95b4304.mockapi.io/api/v1/products").then( (response) => { 
   if(!response.ok){
     throw new Error(`HTTP error: ${response.status}`);
   }
@@ -69,7 +69,7 @@ form.addEventListener('submit', (event) => {
 
 async function searchProducts(searchTerm) {
   try {
-    const response = await fetch(`http://localhost:3000/productos?q=${searchTerm}`);
+    const response = await fetch(`https://64827715f2e76ae1b95b4304.mockapi.io/api/v1/products?q=${searchTerm}`);
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
