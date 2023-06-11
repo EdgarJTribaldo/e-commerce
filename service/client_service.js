@@ -113,20 +113,22 @@ function redirectToPage() {
 // REGISTER USER
 
 const createClient = (userRegister) => {
-  return fetch("https://64827715f2e76ae1b95b4304.mockapi.io/api/v1/products", {
-    methot: "POST",
 
-    // Los headers son un estandar para que el servidor sepa que tipo de archivos va a a recibir 
+  const data = {
+    name: userRegister.name,
+    email: userRegister.email,
+    pass: userRegister.pass,
+  };
+  console.log(data);
+
+  return fetch("https://64827715f2e76ae1b95b4304.mockapi.io/api/v1/users", {
+    method: "POST",
     headers: {
-      "content-type": "application/json"
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify( {
-      name: userRegister.user,
-      description: userRegister.email,
-      contraseña: userRegister.pass,
-    })
+    body: JSON.stringify(data)
+    
   })
-
   .then((response) => { 
     if(response.ok) {
       return response.json();
@@ -142,6 +144,6 @@ const createClient = (userRegister) => {
   })
 }
 
-// export const clientServices = {
-//   createClient
-// }
+export const clientService = {
+  createClient
+};

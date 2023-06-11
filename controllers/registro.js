@@ -1,19 +1,22 @@
-import { clientServices } from "../service/client_service.js"
+import { clientService } from "../service/client_service.js"
 
 const registerForm = document.querySelector("[data-form]"); 
 registerForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const userRegister = {
-    user: registerForm.usuario.value,
+    name: registerForm.usuario.value,
     email: registerForm.email.value,
     pass: registerForm.contraseña.value,
   };
 
+  console.log(userRegister.pass);
 
-  clientServices.createClient(userRegister.user, userRegister.email).then( response  => {
+  clientService.createClient(userRegister).then( response  => {
+    window.location.href = "./login_test.html"
   }).catch(error => console.log(error))
 } );
+
 
 
 
